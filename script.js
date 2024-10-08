@@ -21,7 +21,12 @@ function addWorkingDays(startDate, numDays, holidays) {
         }
     }
 
-    return currentDate.toISOString().split('T')[0];
+    return currentDate;
+}
+
+function formatDate(date) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('en-US', options);
 }
 
 function calculateDate() {
@@ -51,6 +56,7 @@ function calculateDate() {
         '2024-08-19', // Raksha Bandhan
         '2024-08-28', // Onam
         '2024-09-17', // Ganesh Chaturthi
+        '2024-09-24', // Vishwakarma Puja
         '2024-10-02', // Gandhi Jayanti
         '2024-10-10', // Navratri Begins
         '2024-10-11', // Dussehra (Vijayadashami)
@@ -63,5 +69,6 @@ function calculateDate() {
     ];
 
     const resultDate = addWorkingDays(startDate, numDays, holidays);
-    document.getElementById('result').innerText = `The date after ${numDays} working days is: ${resultDate}`;
+    const formattedResultDate = formatDate(resultDate);
+    document.getElementById('result').innerText = `Date after ${numDays} working days is: ${formattedResultDate}`;
 }
