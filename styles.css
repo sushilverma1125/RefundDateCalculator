@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color */
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,10 +11,10 @@ body {
 }
 
 .container {
-    background: #1e1e1e; /* Dark container */
+    background: #1e1e1e;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(202, 216, 196, 0.805); /* Lighter shadow for contrast */
+    box-shadow: 5px 5px 10px rgba(202, 216, 196, 0.805);
     width: 100%;
     max-width: 600px;
     text-align: center;
@@ -23,26 +23,26 @@ body {
 
 h1 {
     margin-bottom: 1rem;
-    color: #ffffff; /* White text for headings */
+    color: #ffffff;
 }
 
 .instructions-box {
     border: 1px solid whitesmoke;
-    padding: 0.25rem; /* Reduced padding */
+    padding: 0.25rem;
     border-radius: 5px;
-    margin: 0 auto 1rem; /* Center the box */
-    text-align: left; /* Align text to the left */
+    margin: 0 auto 1rem;
+    text-align: left;
     line-height: 1.2; 
     width: 380px;
 }
 
 .instructions-box ul {
-    padding-left: 20px; /* Adjust left padding for the list */
-    margin: 0; /* Remove default margin */
+    padding-left: 20px;
+    margin: 0;
 }
 
 .instructions-box p {
-    padding-left: 5px; /* Adjust left padding for the list */
+    padding-left: 5px;
 }
 
 .form-group {
@@ -55,7 +55,7 @@ h1 {
     flex: 0 0 200px;
     text-align: left;
     margin-right: 10px;
-    color: #e0e0e0; /* Light text for labels */
+    color: #e0e0e0;
 }
 
 input[type="date"],
@@ -63,15 +63,15 @@ input[type="number"] {
     flex: 1;
     max-width: 200px;
     padding: 0.5rem;
-    border: 1px solid #444; /* Darker border */
+    border: 1px solid #444;
     border-radius: 4px;
-    background-color: #333; /* Dark input background */
-    color: #e0e0e0; /* Light text for inputs */
+    background-color: #333;
+    color: #e0e0e0;
     margin-bottom: 1rem;
 }
 
 button {
-    background-color: #6200ea; /* Dark theme primary button */
+    background-color: #6200ea;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -80,89 +80,49 @@ button {
 }
 
 button:hover {
-    background-color: #3700b3; /* Darker shade on hover */
+    background-color: #3700b3;
 }
 
 .result {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #ffffff; /* White text for results */
+    color: #ffffff;
 }
 
 @media (max-width: 360px) {
     .instructions-box {
-        width: 100%; /* Full width on small screens */
-        padding: 0.5rem; /* Increase padding for touch targets */
+        width: 100%;
+        padding: 0.5rem;
     }
 
     .container {
-        padding: 1rem; /* Adjust container padding */
-        max-width: 100%; /* Ensure it fits within the viewport */
+        padding: 1rem;
+        max-width: 100%;
     }
 
     .form-group {
-        flex-direction: column; /* Stack label and input */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .form-group label {
-        margin-bottom: 0.5rem; /* Space between label and input */
+        margin-bottom: 0.5rem;
     }
 
     input[type="date"],
     input[type="number"] {
-        max-width: 100%; /* Full width inputs */
+        max-width: 100%;
     }
 
     button {
-        width: 100%; /* Full width button */
+        width: 100%;
     }
 
     h1 {
-        font-size: 1.5rem; /* Adjust heading size */
+        font-size: 1.5rem;
     }
 
     .result {
-        font-size: 1rem; /* Adjust result font size */
+        font-size: 1rem;
     }
 }
-
-@media screen and (max-width: 360px) {
-    .instructions-box {
-        width: 100%; /* Full width on small screens */
-        padding: 0.5rem; /* Adjust padding */
-    }
-
-    .container {
-        padding: 1rem; /* Adjust container padding */
-        max-width: 100%; /* Ensure it fits within the viewport */
-    }
-
-    .form-group {
-        flex-direction: column; /* Stack label and input */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .form-group label {
-        margin-bottom: 0.5rem; /* Space between label and input */
-    }
-
-    input[type="date"],
-    input[type="number"] {
-        max-width: 100%; /* Full width inputs */
-    }
-
-    button {
-        width: 100%; /* Full width button */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
-
-    .result {
-        font-size: 1rem; /* Adjust result font size */
-    }
-}
-
-
