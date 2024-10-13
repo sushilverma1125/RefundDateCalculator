@@ -67,8 +67,14 @@ function calculateDate() {
         '2024-12-03', // St. Francis Xavier Feast
         '2024-12-25'  // Christmas Day
     ];
-
     const resultDate = addWorkingDays(startDate, numDays, holidays);
     const formattedResultDate = formatDate(resultDate);
-    document.getElementById('result').innerText = `Date after ${numDays} working days is: ${formattedResultDate}`;
+    const thanksMessage = `Date after ${numDays} working days is: ${formattedResultDate}`;
+    const thanksMessage1 = `Thank you for using our calculator!💗`;
+    
+    // Displaying the result in the result element
+    document.getElementById('result').innerText = thanksMessage;
+    document.getElementById('result1').innerText = thanksMessage1;
+    
+
 }

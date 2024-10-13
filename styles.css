@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,22 +11,38 @@ body {
 }
 
 .container {
-    background: white;
-    padding: 2rem;
+    background: #1e1e1e; /* Dark container */
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(202, 216, 196, 0.805); /* Lighter shadow for contrast */
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     text-align: center;
+    border: 1px solid white;
 }
 
 h1 {
     margin-bottom: 1rem;
+    color: #ffffff; /* White text for headings */
 }
 
-.instructions {
-    text-align: left;
-    margin: 0;
+.instructions-box {
+    border: 1px solid whitesmoke;
+    padding: 0.25rem; /* Reduced padding */
+    border-radius: 5px;
+    margin: 0 auto 1rem; /* Center the box */
+    text-align: left; /* Align text to the left */
+    line-height: 1.2; 
+    width: 380px;
+}
+
+.instructions-box ul {
+    padding-left: 20px; /* Adjust left padding for the list */
+    margin: 0; /* Remove default margin */
+}
+
+.instructions-box p {
+    padding-left: 5px; /* Adjust left padding for the list */
 }
 
 .form-group {
@@ -38,6 +55,7 @@ h1 {
     flex: 0 0 200px;
     text-align: left;
     margin-right: 10px;
+    color: #e0e0e0; /* Light text for labels */
 }
 
 input[type="date"],
@@ -45,13 +63,15 @@ input[type="number"] {
     flex: 1;
     max-width: 200px;
     padding: 0.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Darker border */
     border-radius: 4px;
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text for inputs */
     margin-bottom: 1rem;
 }
 
 button {
-    background-color: #007bff;
+    background-color: #6200ea; /* Dark theme primary button */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -60,11 +80,11 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #3700b3; /* Darker shade on hover */
 }
 
 .result {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #333;
+    color: #ffffff; /* White text for results */
 }

@@ -9,16 +9,8 @@
 <body>
     <div class="container">
         <h1>Refund Date Calculator</h1>
-        <div class="instructions">
-            <p><strong>Instructions to use it:</strong><br>
-               To calculate your refund date, please follow these steps:</p>
-            <ul>
-                <li>In the first box, enter the date when you submitted your refund form.</li>
-                <li>In the second box, input the number of days it typically takes to process your refund.</li>
-            </ul>
-        </div>
         
-        <p>Once you’ve filled in both boxes, click the calculate button to see the estimated date on which your refund will be issued. <br>Thank you for using our calculator!💗</p>
+        <p>Once you’ve filled in both boxes, click the calculate button to see the estimated date on which your refund will be issued.</p>
         
         <form id="calculatorForm">
             <div class="form-group">
@@ -30,10 +22,18 @@
                 <label for="numDays">Refund policy/timeline:</label>
                 <input type="number" id="numDays" name="numDays" min="1" required>
             </div>
-            
             <button type="button" onclick="calculateDate()">Calculate</button>
+            <br><br>
+            <div id="result" class="result"></div> <br>
+            <div class="instructions-box">
+                <p><strong>Instructions to use it:</strong></p>
+                <ul>
+                    <li>Enter the date of your refund form submission.</li><br>
+                    <li>Input the number of days it typically takes to process your refund.</li> <br>
+                </ul>
+            </div> <br>
+            <div id="result1" class="result"></div> <br>
         </form>
-        <div id="result" class="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
