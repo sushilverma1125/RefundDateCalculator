@@ -25,13 +25,15 @@
             <button type="button" onclick="calculateDate()">Calculate</button>
             <br><br>
             <div id="result" class="result"></div> <br>
-            <div class="instructions-box">
-                <p><strong>Instructions to use it:</strong></p>
-                <ul>
-                    <li>Enter the date of your refund form submission.</li><br>
-                    <li>Input the number of days it typically takes to process your refund.</li> <br>
-                </ul>
-            </div> <br>
+            <p id="toggleInstructions" style="cursor: pointer; color: #007bff;">See instructions to use it</p>
+<div class="instructions-box" style="display: none;"> <!-- Initially hidden -->
+    <p><strong>Instructions to use it:</strong></p>
+    <ul>
+        <li>Enter the date of your refund form submission.</li>
+        <li>Input the number of days it typically takes to process your refund.</li>
+    </ul>
+</div>
+ <br>
             <div id="result1" class="result"></div> <br>
         </form>
     </div>
