@@ -127,4 +127,42 @@ button:hover {
     }
 }
 
+@media screen and (max-width: 360px) {
+    .instructions-box {
+        width: 100%; /* Full width on small screens */
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .container {
+        padding: 1rem; /* Adjust container padding */
+        max-width: 100%; /* Ensure it fits within the viewport */
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack label and input */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .form-group label {
+        margin-bottom: 0.5rem; /* Space between label and input */
+    }
+
+    input[type="date"],
+    input[type="number"] {
+        max-width: 100%; /* Full width inputs */
+    }
+
+    button {
+        width: 100%; /* Full width button */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+
+    .result {
+        font-size: 1rem; /* Adjust result font size */
+    }
+}
+
 
