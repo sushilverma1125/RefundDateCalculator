@@ -54,7 +54,7 @@ h1 {
 .form-group label {
     flex: 0 0 200px;
     text-align: left;
-    margin-right: 10px;
+    margin-right: -20px;
     color: #e0e0e0;
 }
 
