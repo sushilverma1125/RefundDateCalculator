@@ -38,41 +38,5 @@
         </form>
     </div>
     <script src="script.js"></script>
-    <script>
-        function generateUniqueId() {
-            return 'device-' + Math.random().toString(36).substr(2, 9);
-        }
-
-        function checkDeviceId() {
-            let deviceId = localStorage.getItem('deviceId');
-            if (!deviceId) {
-                deviceId = generateUniqueId();
-                localStorage.setItem('deviceId', deviceId);
-                trackDevice(deviceId);
-            } else {
-                console.log('Device ID:', deviceId);
-            }
-        }
-
-        function trackDevice(deviceId) {
-            fetch('https://your-api-url.com/track', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ deviceId }),
-            })
-            .then(response => response.json())
-            .then(data => console.log('Server Response:', data))
-            .catch(error => console.error('Error:', error));
-        }
-
-        window.onload = checkDeviceId;
-
-        document.getElementById('toggleInstructions').onclick = function() {
-            const instructionsBox = document.querySelector('.instructions-box');
-            instructionsBox.style.display = instructionsBox.style.display === 'none' ? 'block' : 'none';
-        };
-    </script>
 </body>
 </html>
