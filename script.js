@@ -69,19 +69,9 @@ function calculateDate() {
     ];
     const resultDate = addWorkingDays(startDate, numDays, holidays);
     const formattedResultDate = formatDate(resultDate);
-    const thanksMessage = `Date after ${numDays} working days is: ${formattedResultDate}`;
-    const thanksMessage1 = `Thank you for using our calculator!💗`;
+    const thanksMessage = `The date after ${numDays} working days is: ${formattedResultDate} \nThank you for using our calculator! 💗`;
     
     // Displaying the result in the result element
     document.getElementById('result').innerText = thanksMessage;
-    document.getElementById('result1').innerText = thanksMessage1;
 }
 
-document.getElementById('toggleInstructions').addEventListener('click', function() {
-    const instructionsBox = document.querySelector('.instructions-box');
-    if (instructionsBox.style.display === 'none' || instructionsBox.style.display === '') {
-        instructionsBox.style.display = 'block'; // Show the instructions
-    } else {
-        instructionsBox.style.display = 'none'; // Hide the instructions
-    }
-});
