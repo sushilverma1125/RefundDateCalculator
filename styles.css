@@ -111,7 +111,7 @@ button:hover {
 
     input[type="date"],
     input[type="number"] {
-        max-width: 100%;
+        max-width: 100px;
     }
 
     button {
