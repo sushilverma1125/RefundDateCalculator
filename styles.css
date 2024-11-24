@@ -16,7 +16,7 @@ body {
     text-align: center;
     font-size: 14px;
     color: antiquewhite;
-    margin-bottom: 10px; /* Space between text and container */
+    margin-bottom: -10px; /* Space between text and container */
     font-family: Arial, sans-serif;
     margin-top: 0; /* Remove any extra top margin */
     font-weight: 900;
@@ -102,6 +102,28 @@ button:hover {
     font-size: 1.2rem;
     color: #ffffff;
 }
+
+/* Social Media Icons Section */
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons .icon {
+    width: 30px; /* Set icon size */
+    height: 30px;
+    transition: transform 0.3s; /* Smooth zoom effect */
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
 
 /* Media Query for screens less than 360px width */
 @media (max-width: 359px) {
