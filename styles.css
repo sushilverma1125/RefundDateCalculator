@@ -116,9 +116,11 @@ button:hover {
 
     .container {
         padding: 0.5rem;
-        width: 100%;
+        width: 90%; /* Use a percentage width for consistent spacing */
         max-width: 100%;
-        box-sizing: border-box;
+        margin: 0 auto; /* Center the container horizontally */
+        box-sizing: border-box; /* Ensure borders are included in the width */
+        border: 1px solid white; /* Ensure the border is visible */
     }
 
     h1 {
@@ -151,6 +153,7 @@ button:hover {
     }
 }
 
+
 /* Media Query for large screens greater than 1600px width */
 @media (min-width: 1600px) {
     body {
@@ -164,7 +167,11 @@ button:hover {
 
     .container {
         padding: 2rem;
-        max-width: 1200px; /* Allow container to grow wider on large screens */
+        width: 70%; /* Use a percentage width for consistent spacing */
+        max-width: 1200px; /* Set a max-width for larger screens */
+        margin: 0 auto; /* Center the container horizontally */
+        box-sizing: border-box; /* Include padding and border in width */
+        border: 1px solid white; /* Ensure the border is visible */
     }
 
     h1 {
@@ -174,7 +181,7 @@ button:hover {
     .form-group {
         justify-content: space-between;
     }
-
+    
     input[type="date"],
     input[type="number"] {
         max-width: 250px; /* Increase input width on large screens */
@@ -187,5 +194,54 @@ button:hover {
 
     .result {
         font-size: 1.5rem; /* Larger result text */
+    }
+}
+
+@media (min-width: 358px) and (max-width: 689px) {
+    body {
+        padding: 10px; /* Add padding for moderate spacing */
+    }
+
+    .made-by {
+        font-size: 12px; /* Slightly larger text for this range */
+        margin-bottom: 10px; /* Moderate space between text and container */
+    }
+
+    .container {
+        padding: 1rem;
+        width: 85%; /* Use a percentage width for consistent spacing */
+        max-width: 100%;
+        margin: 0 auto; /* Center the container horizontally */
+        box-sizing: border-box; /* Include padding and border in width */
+        border: 1px solid white; /* Ensure the border is visible */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for medium screens */
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack form items vertically */
+        align-items: stretch;
+    }
+
+    .form-group label {
+        margin-bottom: -170px;
+    }
+
+    input[type="date"],
+    input[type="number"] {
+        max-width: 100%; /* Ensure inputs adjust to available space */
+        margin-bottom: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem; /* Adjust button text size */
+    }
+
+    .result {
+        font-size: 1.2rem; /* Adjust result text size */
     }
 }
