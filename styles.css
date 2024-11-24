@@ -231,7 +231,7 @@ button:hover {
 
     input[type="date"],
     input[type="number"] {
-        max-width: 100%; /* Ensure inputs adjust to available space */
+        max-width: 250px; /* Ensure inputs adjust to available space */
         margin-bottom: 1rem;
     }
 
