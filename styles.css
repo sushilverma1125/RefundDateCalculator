@@ -1,269 +1,90 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column; /* Stack elements vertically */
+    font-family: 'Poppins', sans-serif;
+    background-color: #131419;
 }
 
 .made-by {
     text-align: center;
     font-size: 14px;
     color: antiquewhite;
-    margin-bottom: -10px; /* Space between text and container */
-    font-family: Arial, sans-serif;
-    margin-top: 0; /* Remove any extra top margin */
-    font-weight: 900;
+    font-family: cursive;
+    margin-top: 0;
 }
 
-.container {
-    background: #1e1e1e;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(202, 216, 196, 0.805);
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    border: 1px solid white;
-    margin-top: 20px; /* Add some space between the text and container */
+.container.custom-width {
+    max-width: 450px;
+    padding: 1rem 1.5rem;
+    height: 320px;
+    background: linear-gradient(135deg, #1e3c7200, #2a529830); /* Example gradient */
+    border: 1px solid rgba(249, 249, 249, 0.807); /* Semi-transparent border */
+    backdrop-filter: blur(10px); /* Glass effect */
 }
 
-h1 {
-    margin-bottom: 1rem;
-    color: #ffffff;
+/* Glassmorphism Effect */
+.glass-bg {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(8px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft white border */
 }
 
-.instructions-box {
-    border: 1px solid whitesmoke;
-    padding: 0.25rem;
-    border-radius: 5px;
-    margin: 0 auto 1rem;
-    text-align: left;
-    line-height: 1.2; 
-    width: 380px;
-}
-
-.instructions-box ul {
-    padding-left: 20px;
-    margin: 0;
-}
-
-.instructions-box p {
-    padding-left: 5px;
-}
-
-.form-group {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.form-group label {
-    flex: 0 0 200px;
-    text-align: left;
-    margin-right: -20px;
-    color: #e0e0e0;
-}
-
-input[type="date"],
-input[type="number"] {
-    flex: 1;
-    max-width: 200px;
-    padding: 0.5rem;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background-color: #333;
-    color: #e0e0e0;
-    margin-bottom: 1rem;
-}
-
-button {
-    background-color: #6200ea;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3700b3;
-}
-
-.result {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    color: #ffffff;
-}
-
-/* Social Media Icons Section */
-.social-icons {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.social-icons .icon {
-    width: 30px; /* Set icon size */
+/* Social Media Icons */
+.icon {
+    width: 30px;
     height: 30px;
-    transition: transform 0.3s; /* Smooth zoom effect */
+    transition: transform 0.3s;
 }
 
-.social-icons .icon:hover {
-    transform: scale(1.2); /* Slight zoom effect on hover */
+.icon:hover {
+    transform: scale(1.2);
 }
 
+#result {
+    white-space: pre-line;
+}
 
-/* Media Query for screens less than 360px width */
-@media (max-width: 359px) {
-    body {
-        padding: 5px; /* Reduce padding on very small screens */
+p.instructions {
+    color: white; /* Set text color to white */
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .container.custom-width {
+        width: 90%; /* Make container take more screen space */
+        padding: 1rem; /* Reduce padding */
+        height: auto; /* Allow height to adjust */
     }
 
-    .made-by {
-        font-size: 10px; /* Smaller text for small screens */
-        margin-bottom: 5px; /* Less space between text and container */
-    }
-
-    .container {
-        padding: 0.5rem;
-        width: 90%; /* Use a percentage width for consistent spacing */
-        max-width: 100%;
-        margin: 0 auto; /* Center the container horizontally */
-        box-sizing: border-box; /* Ensure borders are included in the width */
-        border: 1px solid white; /* Ensure the border is visible */
-    }
-
-    h1 {
-        font-size: 1.3rem; /* Smaller heading for small screens */
-    }
-
-    .form-group {
+    /* Stack labels and inputs vertically */
+    .row {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .form-group label {
-        margin-bottom: -170px;
+    .col-form-label {
+        text-align: left; /* Align labels to the left */
+        margin-bottom: 0.5rem;
+        text-align-last: start; 
     }
 
-    input[type="date"],
-    input[type="number"] {
-        max-width: 100%;
-        margin-bottom: 1rem;
+    .form-control {
+        width: 100%; /* Make form inputs full width */
     }
 
     button {
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 0.9rem; /* Smaller button text */
-    }
-
-    .result {
-        font-size: 1rem;
-    }
-}
-
-
-/* Media Query for large screens greater than 1600px width */
-@media (min-width: 1600px) {
-    body {
-        padding: 20px; /* Add padding for larger screens */
+        width: 100%; /* Make button full width */
+        padding: 0.8rem; /* Add padding for better button touch target */
     }
 
     .made-by {
-        font-size: 18px; /* Larger footer text */
-        margin-bottom: 20px; /* More space between text and container */
+        font-size: 12px;
     }
 
-    .container {
-        padding: 2rem;
-        width: 70%; /* Use a percentage width for consistent spacing */
-        max-width: 1200px; /* Set a max-width for larger screens */
-        margin: 0 auto; /* Center the container horizontally */
-        box-sizing: border-box; /* Include padding and border in width */
-        border: 1px solid white; /* Ensure the border is visible */
+    h3 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
 
-    h1 {
-        font-size: 2.5rem; /* Increase heading size */
-    }
-
-    .form-group {
-        justify-content: space-between;
-    }
-    
-    input[type="date"],
-    input[type="number"] {
-        max-width: 250px; /* Increase input width on large screens */
-    }
-
-    button {
-        padding: 0.75rem 1.5rem; /* Larger button padding */
-        font-size: 1.2rem; /* Larger button text */
-    }
-
-    .result {
-        font-size: 1.5rem; /* Larger result text */
-    }
-}
-
-@media (min-width: 358px) and (max-width: 689px) {
-    body {
-        padding: 10px; /* Add padding for moderate spacing */
-    }
-
-    .made-by {
-        font-size: 12px; /* Slightly larger text for this range */
-        margin-bottom: 10px; /* Moderate space between text and container */
-    }
-
-    .container {
-        padding: 1rem;
-        width: 85%; /* Use a percentage width for consistent spacing */
-        max-width: 100%;
-        margin: 0 auto; /* Center the container horizontally */
-        box-sizing: border-box; /* Include padding and border in width */
-        border: 1px solid white; /* Ensure the border is visible */
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Adjust heading size for medium screens */
-    }
-
-    .form-group {
-        flex-direction: column; /* Stack form items vertically */
-        align-items: stretch;
-    }
-
-    .form-group label {
-        margin-bottom: -170px;
-    }
-
-    input[type="date"],
-    input[type="number"] {
-        max-width: 250px; /* Ensure inputs adjust to available space */
-        margin-bottom: 1rem;
-    }
-
-    button {
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 1rem; /* Adjust button text size */
-    }
-
-    .result {
-        font-size: 1.2rem; /* Adjust result text size */
+    p.instructions {
+        font-size: 14px; /* Adjust instruction text size */
     }
 }
