@@ -13,13 +13,35 @@ body {
 }
 
 .container.custom-width {
-    max-width: 450px;
+    max-width: 600px;
     padding: 1rem 1.5rem;
     height: 320px;
     background: linear-gradient(135deg, #1e3c7200, #2a529830); /* Example gradient */
     border: 1px solid rgba(249, 249, 249, 0.807); /* Semi-transparent border */
     backdrop-filter: blur(10px); /* Glass effect */
 }
+
+/* Updated Container Styles */
+.container.custom-width {
+    max-width: 600px;
+    padding: 1rem 1.5rem;
+    min-height: 320px; /* Maintain a minimum height */
+    height: auto; /* Allow height to expand dynamically */
+    background: linear-gradient(135deg, #1e3c7200, #2a529830);
+    border: 1px solid rgba(249, 249, 249, 0.807);
+    backdrop-filter: blur(10px);
+    transition: height 0.3s ease-in-out; /* Smooth height adjustment */
+}
+
+/* Updated Result Styles */
+#result {
+    white-space: pre-line;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding: 10px;
+}
+
 
 /* Glassmorphism Effect */
 .glass-bg {
@@ -45,6 +67,10 @@ body {
 
 p.instructions {
     color: white; /* Set text color to white */
+}
+
+.text{
+    font-size: 13px;
 }
 
 /* Responsive Design */
