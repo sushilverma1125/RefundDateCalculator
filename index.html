@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +12,30 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="text-light d-flex flex-column align-items-center justify-content-center vh-100">
     <!-- Text above the container -->
-    <p class="made-by">Made with 💗 by Sushil</p>
+    <p class="made-by">Made with 💗 by Sushil !</p>
 
     <div class="container glass-bg rounded-3 py-3 px-4 shadow-lg text-center custom-width">
         <h1 style="color: aquamarine;">Refund Date Calculator</h1>
-        <p class="text-light mb-3 text">Once you've filled in both boxes, click the calculate button to see the estimated date on which your refund will be issued.</p>
-        
+        <p class="text-light mb-3 text">Once you've filled in both boxes, click the calculate button to see the
+            estimated date on which your refund will be issued.</p>
+
         <form id="calculatorForm">
             <div class="row mb-3 align-items-center">
                 <label for="startDate" class="col-sm-6 col-form-label text-end">Refund form filled on:</label>
                 <div class="col-sm-6">
-                    <input type="date" id="startDate" name="startDate" class="form-control" placeholder="Choose date" required>
+                    <input type="date" id="startDate" name="startDate" class="form-control" placeholder="Choose date"
+                        required>
                 </div>
             </div>
-            
+
             <div class="row mb-3 align-items-center">
                 <label for="numDays" class="col-sm-6 col-form-label text-end">Refund policy/timeline:</label>
                 <div class="col-sm-6">
-                    <input type="number" id="numDays" name="numDays" class="form-control" min="1" placeholder="Enter days" required>
+                    <input type="number" id="numDays" name="numDays" class="form-control" min="1"
+                        placeholder="Enter days" required>
                 </div>
             </div>
 
@@ -38,6 +43,8 @@
         </form>
 
         <div id="result" class="mt-4 fw-bold text-info text-center"></div>
+        <div id="alternateMessage" class="mt-2 fw-bold text-info text-center"></div>
+
     </div>
 
     <!-- Social Media Icons -->
@@ -63,7 +70,7 @@
     <script>
         // Select the share button
         const shareBtn = document.querySelector("#shareBtn");
-    
+
         // Add a click event listener to the share button
         shareBtn.addEventListener("click", async () => {
             if (navigator.share) {
@@ -82,4 +89,5 @@
         });
     </script>
 </body>
+
 </html>

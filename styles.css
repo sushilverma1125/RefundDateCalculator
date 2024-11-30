@@ -73,6 +73,11 @@ p.instructions {
     font-size: 13px;
 }
 
+#alternateMessage {
+    transition: opacity 0.5s ease-in-out;
+}
+
+
 /* Responsive Design */
 @media (max-width: 576px) {
     .container.custom-width {

@@ -1,3 +1,4 @@
+// Function to add working days
 function addWorkingDays(startDate, numDays, holidays) {
   const addDays = (date, days) => {
     const result = new Date(date);
@@ -6,8 +7,8 @@ function addWorkingDays(startDate, numDays, holidays) {
   };
 
   const isWeekendOrHoliday = (date) => {
-    const day = date.getDay();
-    const formattedDate = date.toISOString().split("T")[0];
+    const day = date.getDay(); // 0 for Sunday, 6 for Saturday
+    const formattedDate = date.toISOString().split("T")[0]; // Format: YYYY-MM-DD
     return day === 0 || day === 6 || holidays.includes(formattedDate);
   };
 
@@ -24,6 +25,7 @@ function addWorkingDays(startDate, numDays, holidays) {
   return currentDate;
 }
 
+// Function to format the date
 function formatDate(date) {
   const options = {
     weekday: "long",
@@ -34,6 +36,7 @@ function formatDate(date) {
   return date.toLocaleDateString("en-US", options);
 }
 
+// Function to calculate and display the result
 function calculateDate() {
   const startDate = document.getElementById("startDate").value;
   const numDays = parseInt(document.getElementById("numDays").value, 10);
@@ -42,6 +45,7 @@ function calculateDate() {
     document.getElementById("result").innerText = "Please enter valid inputs.";
     return;
   }
+
   const holidays = [
     "2024-01-01",
     "2024-01-13",
@@ -200,12 +204,22 @@ function calculateDate() {
 
   const resultDate = addWorkingDays(startDate, numDays, holidays);
   const formattedResultDate = formatDate(resultDate);
-  const thanksMessage = `The date after ${numDays} working days is: <span style="color: white;">${formattedResultDate}</span> <br><span style="color: #7fffd4; font-weight: bolder;">Thank you for using our calculator! 💗</span>`;
 
   const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = thanksMessage;
+  const messages = [
+    `<span style="color: aquamarine;">The date after ${numDays} working days is:<span style="color: #ffffff;"> ${formattedResultDate}</span></span>`,
+    `<span style="color: aquamarine; font-weight: bold;">Thank you for using our calculator! 💗</span>`,
+    `<span style="color: white; font-weight: bold;">Help us grow! 🌱 <span style="color: aquamarine; font-weight: bold;">8002957962@axisb</span></span>`,
+  ];
 
-  // Allow the container to adjust height automatically
-  const container = document.querySelector(".container.custom-width");
-  container.style.height = "auto";
+  let messageIndex = 0;
+
+  const updateMessage = () => {
+    resultDiv.innerHTML = messages[messageIndex];
+    messageIndex = (messageIndex + 1) % messages.length;
+  };
+
+  // Start the message cycle
+  updateMessage();
+  setInterval(updateMessage, 2000);
 }
