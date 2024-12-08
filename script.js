@@ -209,7 +209,7 @@ function calculateDate() {
   const messages = [
     `<span style="color: aquamarine;">The date after ${numDays} working days is:<span style="color: #ffffff;"> ${formattedResultDate}</span></span>`,
     `<span style="color: aquamarine; font-weight: bold;">Thank you for using our calculator! 💗</span>`,
-    `<span style="color: white; font-weight: bold;">Help us grow! 🌱 <span style="color: aquamarine; font-weight: bold;">8002957962@axisb</span></span>`,
+    `<span style="color: white; font-weight: bold;">Help us grow! 🌱 <span style="color: aquamarine; font-weight: bold;">sushilverma8480-1@okaxis</span></span>`,
   ];
 
   let messageIndex = 0;
