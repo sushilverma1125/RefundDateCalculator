@@ -92,5 +92,5 @@ function calculateDate() {
 
   // Start the message cycle
   updateMessage();
-  setInterval(updateMessage, 2000);
+  setInterval(updateMessage, 5000);
 }
